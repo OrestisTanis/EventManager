@@ -4,7 +4,7 @@ The EventManager.js library is designed to help achieve loose coupling between t
 
 ## Features
 
-- Easy to use and pretty straight-forward
+- Easy and straight-forward to use
 - Attach/detach listeners to custom events
 - Fire custom events
 

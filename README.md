@@ -20,10 +20,12 @@ import EventManager from  'path_to_lib_src_folder/event-manager.js;
 <script src="path_to_lib_src_folder/event-manager.bundle.js"></script>
 ```
 
+
 1.) Get the reference of the EventManager instance  
 ```js
 var eventManager = EventManager.getInstance();
 ```
+
 
 2.) Attach listeners to events
 ```js
@@ -45,11 +47,13 @@ const emailService = {
 eventManager.on('USER_DELETED', emailService);]
 ```
 
+
 3.) Fire events with carried payloads
 ```js
 // eg. user with id = 5 was just deleted from db, fire the event
 eventManager.fireEvent('USER_DELETED', {user_id: 5});
 ```
+
 
 4.) Detach listeners from events by reference
 ```js

@@ -13,7 +13,7 @@ The EventManager.js library is designed to help achieve loose coupling between t
 - In case you installed via npm or other package managers  
 `import EventManager from  'path_to_lib_src_folder/event-manager.js;`
 
-- You can alternatively even include the bundle file with your HTML. 
+- You can alternatively even include the bundle file with your HTML  
 `<script src="path_to_lib_src_folder/event-manager.bundle.js"></script>`
 
 1.) Get the reference of the EventManager instance 

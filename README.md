@@ -15,17 +15,21 @@ The EventManager.js library is designed to help achieve loose coupling between t
 import EventManager from  'path_to_lib_src_folder/event-manager.js;
 ```
 
+<br/>
+
 - You can alternatively even include the bundle file with your HTML  
 ```html
 <script src="path_to_lib_src_folder/event-manager.bundle.js"></script>
 ```
 
+<br/>
 
 1.) Get the reference of the EventManager instance  
 ```js
 var eventManager = EventManager.getInstance();
 ```
 
+<br/>
 
 2.) Attach listeners to events
 ```js
@@ -47,6 +51,7 @@ const emailService = {
 eventManager.on('USER_DELETED', emailService);]
 ```
 
+<br/>
 
 3.) Fire events with carried payloads
 ```js
@@ -54,6 +59,7 @@ eventManager.on('USER_DELETED', emailService);]
 eventManager.fireEvent('USER_DELETED', {user_id: 5});
 ```
 
+<br/>
 
 4.) Detach listeners from events by reference
 ```js

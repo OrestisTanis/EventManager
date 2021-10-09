@@ -23,7 +23,7 @@ The EventManager.js library is designed to help achieve loose coupling between t
 ```js
 // Listeners can be any function OR object with a notify() method;
 const myDbSyncFunction = (event) => { 
-    console.log(`User with user.id = ${event.payload.id} was just deleted. Syncing databases...`);
+    console.log(`User with user.id = ${event.payload.user_id} was just deleted. Syncing databases...`);
 };
 eventManager.on('USER_DELETED', myDbSyncFunction);
 
@@ -32,7 +32,7 @@ const db = {
     someOtherMethod: () => { },
     notify: (event) => {
         if (event.name === 'USER_DELETED'){
-            console.log(`User with user.id = ${event.payload.id} was just deleted. Syncing databases...`);
+            console.log(`User with user.id = ${event.payload.user_id} was just deleted. Syncing databases...`);
         }
     }
 }

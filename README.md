@@ -16,7 +16,7 @@ The EventManager.js library is designed to help achieve loose coupling between t
 - You can alternatively even include the bundle file with your HTML  
 `<script src="path_to_lib_src_folder/event-manager.bundle.js"></script>`
 
-1.) Get the reference of the EventManager instance 
+1.) Get the reference of the EventManager instance  
 `var eventManager = EventManager.getInstance();`
 
 2.) Attach listeners to events

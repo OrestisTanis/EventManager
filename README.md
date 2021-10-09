@@ -28,15 +28,15 @@ const myDbSyncFunction = (event) => {
 eventManager.on('USER_DELETED', myDbSyncFunction);
 
 // Multiple listeners can be attached to the same event
-const db = { 
+const emailService = { 
     someOtherMethod: () => { },
     notify: (event) => {
         if (event.name === 'USER_DELETED'){
-            console.log(`User with user.id = ${event.payload.user_id} was just deleted. Syncing databases...`);
+            console.log(`User with user.id = ${event.payload.user_id} was just deleted. Sending email...`);
         }
     }
 }
-eventManager.on('USER_DELETED', db);]
+eventManager.on('USER_DELETED', emailService);]
 ```
 
 3.) Fire events with carried payloads
@@ -48,5 +48,5 @@ eventManager.fireEvent('USER_DELETED', {user_id: 5});
 4.) Detach listeners from events by reference
 ```js
 eventManager.off('MyEventName', myDbSyncFunction);
-eventManager.off('MyEventName', db);
+eventManager.off('MyEventName', emailService);
 ```
